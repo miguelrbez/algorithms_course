@@ -6,7 +6,7 @@ def quicksort(array):
     if p == 0:
         return array
     else:
-        print(array[p])
+        # print(array[p])
         i = 0
         while i < p:
             # print("Iter: ", i, "->", array[i])
@@ -21,20 +21,20 @@ def quicksort(array):
                 p -= 1
             else:
                 i += 1
-            print("p:", p, "=", array[p])
-            print(array)
+            # print("p:", p, "=", array[p])
+            # print(array)
             
         if p == 0:
-            print("q")
+            # print("q")
             # high_array = quicksort(array[p+1:])
             # return [array[p]] + high_array
             return [array[p]] + quicksort(array[p+1:])
         elif p == len(array) + 1:
-            print("qq")
+            # print("qq")
             return quicksort(array[0:p]) + [array[p]]
             # return [quicksort(array[0:p])] + [array[p]]
         else:
-            print("qqq")
+            # print("qqq")
             # return quicksort(array[0:p-1]).extend(array[p]).extend(quicksort(array[p+1:]))
             # return quicksort(array[0:p-1]).append(array[p]).extend(quicksort(array[p+1:])) + [array[p]] + quicksort(array[p+1:])
             # return quicksort([array[p]])
@@ -48,6 +48,7 @@ def quicksort(array):
             
         # return array
 
-test = [21, 4, 1, 3, 9, 20, 25, 6, 21, 14]
-test = [2, 4, 1, 3]
+# test = [21, 4, 1, 3, 9, 20, 25, 6, 21, 14]
+test = [21, 4, 1, 3, 9]
+# test = [2, 4, 1, 3]
 print quicksort(test)
