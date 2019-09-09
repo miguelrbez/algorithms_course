@@ -16,7 +16,7 @@ Cairo (Egypt, Africa)
 Shanghai (China, Asia)"""
 
 locations = {'North America': {'USA': ['Mountain View', 'Atlanta']},
-'Asia': {'India': ['Bangalore'], 'China': ['Shangai']},
+'Asia': {'India': ['Bangalore'], 'China': ['Shanghai']},
 'Africa':{'Egypt': ['Cairo']}
 }
 
@@ -44,7 +44,8 @@ asian_cities = []
 for country in locations['Asia']:
     for city in locations['Asia'][country]:
         asian_cities.append(city)
-locations['Asia'][]
 for city in sorted(asian_cities):
-    print(city)
+    for country in locations['Asia']:
+        if city in locations['Asia'][country]:
+            print(city + " - " + country)
 # sorted(locations['Asia'])
